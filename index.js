@@ -94,10 +94,10 @@ submitBtn.addEventListener('click', () => {
         data = document.getElementById('requestJsonText').value
         }
       // Log all the values in the console
-    console.log("URL is", url);
-    console.log("requestType is", requestType);
-    console.log("contentType is", contentType);
-    console.log("data is", data);
+    // console.log("URL is", url);
+    // console.log("requestType is", requestType);
+    // console.log("contentType is", contentType);
+    // console.log("data is", data);
 
 
     //  if the request type is get, invoke fetch api to create a get request
@@ -114,7 +114,7 @@ submitBtn.addEventListener('click', () => {
     // if the request type is POST/
     else(
         fetch(url, {
-            method: 'POT',
+            method: 'POST',
             body : data,
             headers: {
                 'Content-type': 'application/json; charset=UTF-8',
@@ -125,7 +125,7 @@ submitBtn.addEventListener('click', () => {
         .then((text) =>{
             document.getElementById("responseJsonText").value = text;
         })
-    )
+    );
 
 
 })
